@@ -23,10 +23,11 @@ export default function App() {
   function reset() {
     stop();
     setSeconds(0);
+    setMinutes(0)
   }
 
   useEffect(() => {
-    if (seconds % 20 === 0) {
+    if (seconds / 60 === 10) {
       setMinutes((prevMin) => prevMin + 1);
       setSeconds(0);
     }
